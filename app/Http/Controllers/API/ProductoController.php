@@ -9,7 +9,16 @@ use App\Http\Controllers\Controller;
 
 class ProductoController extends Controller
 {
-    //
+    /*
+    Este function de controlador tiene como objetivo extraer la data de la Base de Datos y 
+    retornarla en forma de json para el uso de esta desde el front.
+    Tiene como variable: 
+    $item: Esta variable guarda cada una de las categorias que hay en la tabla product.
+    $data: Me guarda toda la data final que se retorna al front.
+    $category: Guarda la categoria de turno en el foreach.
+    $product: Guarda los product que tengas en comun la categoria en turno en el foreach.
+    $result: Variable que me permite organizar la data de forma correcta.
+    */
 
     public function getProductCategory(){
         $item = Product::from('product')
